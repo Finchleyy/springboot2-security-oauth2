@@ -42,14 +42,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     /**
      * 配置内存模式的用户
      */
-    @Bean
+    /*@Bean
     @Override
     protected UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User.withUsername("demoUser1").password(new BCryptPasswordEncoder().encode("123456")).authorities("USER").build());
         manager.createUser(User.withUsername("demoUser2").password(new BCryptPasswordEncoder().encode("123456")).authorities("USER").build());
         return manager;
-    }
+    }*/
 
     /**
      * 需要配置这个支持password模式
