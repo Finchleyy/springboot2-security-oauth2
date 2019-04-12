@@ -39,7 +39,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    //配置内存模式的用户
+    /**
+     * 配置内存模式的用户
+     */
     @Bean
     @Override
     protected UserDetailsService userDetailsService() {

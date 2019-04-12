@@ -16,9 +16,11 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
-                .realm("oauth2-resources") //code授权添加
+                //code授权添加
+                .realm("oauth2-resources")
                 .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()") //allow check token
+                //allow check token
+                .checkTokenAccess("isAuthenticated()")
                 .allowFormAuthenticationForClients();
     }
 
