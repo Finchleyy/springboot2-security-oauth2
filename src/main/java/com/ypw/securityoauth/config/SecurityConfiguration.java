@@ -31,13 +31,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     /**
      * 重写PasswordEncoder  接口中的方法，实例化加密策略
-     *
+     *  不注入这个 bean 时密码前要加{noop}
      * @return 返回 BCrypt 加密策略
      */
-    @Bean
+    /*@Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }
+    }*/
 
     /**
      * 配置内存模式的用户

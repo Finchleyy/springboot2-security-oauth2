@@ -42,7 +42,7 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("demoApp")
-                .secret("$2a$10$peCLpZJ/91PfjruaI4SBpuXfaN2Kue6kLHbHJifTvbPVR3kO8FWLi")
+                .secret("{noop}secret")
                 .redirectUris("http://baidu.com")//code授权添加
                 .authorizedGrantTypes("authorization_code", "client_credentials", "password", "refresh_token")
                 .scopes("all")
